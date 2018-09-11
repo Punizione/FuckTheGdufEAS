@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+	"version": "0.1.1",
+	"name": "FastChange",
+	"description": "Way to change account quickly",
+	"icons": {
+		"16": "img/logo.jpg",
+		"48": "img/logo.jpg",
+		"128": "img/logo.jpg"
+	},
+	"page_action": {
+		"default_icon": "img/logo.jpg",
+		"default_title": "A tool to change account quickly",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"notifications",
+		"declarativeContent"
+	],
+	"content_scripts": [
+		{
+			"matches": ["http://jwxt.gduf.edu.cn/jsxsd/framework/xsMain.jsp"],
+			"js": ["js/content-script.js"],
+			"run_at": "document_start"
+		}
+	],
+	"background": {
+		"scripts": ["js/background.js"]
+	}
+}
