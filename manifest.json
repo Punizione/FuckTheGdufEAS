@@ -19,7 +19,7 @@
 	],
 	"content_scripts": [
 		{
-			"matches": ["http://jwxt.gduf.edu.cn/jsxsd/framework/xsMain.jsp"],
+			"matches": ["http://jwxt.gduf.edu.cn/jsxsd/framework/xsMain.jsp","http://jwxt.gduf.edu.cn/jsxsd/framework/main.jsp"],
 			"js": ["js/content-script.js"],
 			"run_at": "document_start"
 		}

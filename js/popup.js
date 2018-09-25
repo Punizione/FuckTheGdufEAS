@@ -10,7 +10,7 @@ function sendMessageToContentScript(message, callback) {
 
 document.getElementById('send').onclick = function() {
 	var sid = document.getElementById('sid').value
-	if (/\d{7}/.test(sid)) {
+	if (/\d{7}/.test(sid)||/\d+-\d+/.test(sid)) {
 		sendMessageToContentScript({
 			"sid": sid
 		}, function(response){
